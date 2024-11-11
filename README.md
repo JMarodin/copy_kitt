@@ -10,25 +10,24 @@ Create your virtual environment: `python -m venv venv`.
 
 Enter your virtual environment: `. venv/bin/activate`
 
-Install via pip: `pip install -r requirements.txt`. Running `cd app` and then `uvicorn copykitt_api:app --reload`.
+Install via pip: `pip install -r requirements.txt`.
 
 
 ## Usage:
 
-Loading environment variables into `os.environ`:
+Setting up your OpenAI Api Key:
+Open a cdm prompt cd into the app folder and then `export OPENAI_API_KEY=your_key`.
 
-Add the following line to your main python file.
+Running:
+Cmd prompt 1: `cd copykitt-site` and then `yarn dev`.
 
-    import dotenv
+Cmd prompt 2: `cd app` and then `uvicorn copykitt_api:app --reload`.
 
-Filepath can be blank if `.env` is in current working directory
-
-    dotenv.load() or dotenv.load('/path/to/file')
-
+Then change the `const ENDPOINT` insite copykitt-site/components/copykitt.tsx to `http://127.0.0.1:8000/generate_snippet`.
 
 ## Examples
 
-![copykitt_results_image](./images/copykitt_results.png)
+![copykitt_results_image](copykitt-example.png)
 
 ## Lambda Layer ZIP
 
