@@ -1,0 +1,7 @@
+fastapi==0.99.0
+mangum
+openai
+requests
+pydantic-core
+pydantic_core
+pydantic
